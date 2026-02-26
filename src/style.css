@@ -65,6 +65,8 @@ body {
   position: relative;
   background: transparent !important;
   z-index: 1;
+  /* マージンでの重なりは廃止し、背景画像のみをはみ出させます */
+  margin: 0 !important;
 }
 
 /* ページ全体の背景を一括制御 */
@@ -96,24 +98,28 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 140vh;
+  height: calc(100% + 400px);
+  /* 次のセクションへ400px分はみ出す */
   background-image: url('/haikei1.png');
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
-  /* 上から下へフェードアウト */
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 10%, transparent 70%);
-  mask-image: linear-gradient(to bottom, black 0%, black 10%, transparent 70%);
+  /* 下端を非常に長くフェードアウト */
+  -webkit-mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%);
   z-index: -1;
+  pointer-events: none;
 }
 
-/* 下部背景画像 */
+/* 下部セクション */
 .bg-lower {
-  margin-top: -600px !important;
-  /* さらに深く重ねる */
-  padding-top: 600px !important;
-  z-index: 2;
-  /* bg-upper(z-index:1)より上に配置 */
+  z-index: 1;
 }
 
 /* コンテンツ（喜びの声など）を最前面へ */
@@ -125,33 +131,30 @@ body::before {
 .bg-lower::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -400px;
+  /* 前のセクションへ400px分はみ出す */
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 400px);
   background-image: url('/haikei2.png');
   background-size: 100% auto;
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
-  /* 上端をより中央からぼかして馴染ませる */
-  -webkit-mask-image: linear-gradient(to top, black 0%, black 30%, transparent 90%);
-  mask-image: linear-gradient(to top, black 0%, black 30%, transparent 90%);
-  z-index: -1;
-}
-
-/* 背景を溶け込ませる専用のレイヤー（コンテンツを覆わないようにz-index調整） */
-.bg-lower::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 800px;
-  background: linear-gradient(to bottom, var(--color-base) 10%, transparent 100%);
+  /* 上端を非常に長くフェードイン */
+  -webkit-mask-image: linear-gradient(to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%);
   z-index: -2;
-  /* 画像よりさらに下、あるいはコンテンツに被らない順序 */
+  /* bg-upperの背景より後ろに配置 */
   pointer-events: none;
 }
+
+/* 以前の白いフェードレイヤーなどは不要なので削除 */
 
 h1,
 h2,

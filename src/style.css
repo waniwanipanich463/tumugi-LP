@@ -14,6 +14,12 @@
   --color-white: #ffffff;
   /* カードは白 */
   --color-card-border: rgba(74, 20, 140, 0.1);
+  --color-bg-1: #e0f7fa;
+  /* haikei1に近い色 */
+  --color-bg-2: #ffffff;
+  /* 中間の白 */
+  --color-bg-3: #fff9e6;
+  /* haikei2に近いクリーム */
 
   --font-main: "Noto Sans JP", sans-serif;
   --font-heading: "Noto Sans JP", sans-serif;
@@ -53,52 +59,73 @@ body {
   margin: 0;
 }
 
-.bg-upper {
+/* --- 抜本的修正：背景の重なり構造をリセット --- */
+.bg-upper,
+.bg-lower {
+  position: relative;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1;
+}
+
+/* ページ全体の背景を一括制御 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 3枚の画像を滑らかに繋ぐ巨大なグラデーション背景 */
+  background:
+    linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 20%,
+      var(--color-base) 40%,
+      var(--color-base) 60%,
+      rgba(255, 249, 230, 0.8) 80%,
+      rgba(255, 255, 255, 0) 100%),
+    url('/haikei3.png');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+/* 上部背景画像 */
+.bg-upper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
   background-image: url('/haikei1.png');
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
-  position: relative;
-  z-index: 10;
+  /* 下端を極限まで長くフェードアウト */
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 30%, transparent 90%);
+  mask-image: linear-gradient(to bottom, black 0%, black 30%, transparent 90%);
+  z-index: -1;
 }
 
-.bg-upper::after {
+/* 下部背景画像 */
+.bg-lower::before {
   content: "";
   position: absolute;
-  bottom: -1px;
-  /* 隙間を防ぐ */
+  top: 0;
   left: 0;
   width: 100%;
-  height: 400px;
-  /* より大きくぼかす */
-  background: linear-gradient(to bottom, transparent 0%, var(--glass-bg) 40%, var(--color-base) 100%);
-  z-index: 11;
-  pointer-events: none;
-}
-
-.bg-lower {
-  position: relative;
-  z-index: 5;
-  margin-top: -200px;
-  /* 重なりを深くする */
-  padding-top: 200px;
+  height: 150vh;
   background-image: url('/haikei2.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-}
-
-.bg-lower::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  /* 隙間を防ぐ */
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(to top, transparent 0%, var(--glass-bg) 40%, var(--color-base) 100%);
-  z-index: 6;
-  pointer-events: none;
+  /* 上端を極限まで長くフェードイン */
+  -webkit-mask-image: linear-gradient(to top, black 0%, black 30%, transparent 90%);
+  mask-image: linear-gradient(to top, black 0%, black 30%, transparent 90%);
+  z-index: -1;
 }
 
 h1,

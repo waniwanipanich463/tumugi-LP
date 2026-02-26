@@ -58,9 +58,9 @@ body {
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
-  /* 下端をぼかして消す */
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  /* 下端をより広範囲にぼかして滑らかにする */
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
 .bg-lower {
@@ -70,9 +70,9 @@ body {
   background-position: center top;
   /* 上端から画像を開始 */
   background-repeat: no-repeat;
-  /* 上端をぼかして馴染ませる：フェード量を調整 */
-  -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
-  mask-image: linear-gradient(to top, black 90%, transparent 100%);
+  /* 上端をより広範囲にぼかして馴染ませる */
+  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  mask-image: linear-gradient(to top, black 50%, transparent 100%);
   padding-top: 5vh;
   /* 開始位置に少し余裕を持たせる */
 }

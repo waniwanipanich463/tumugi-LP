@@ -92,31 +92,6 @@ body::before {
   z-index: -2;
 }
 
-.bg-upper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 400px);
-  /* 次のセクションへ400px分はみ出す */
-  background-image: url('/haikei1.png');
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  /* 下端を非常に長くフェードアウト */
-  -webkit-mask-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0) 100%);
-  z-index: -1;
-  pointer-events: none;
-}
-
 /* 下部セクション */
 .bg-lower {
   z-index: 1;
@@ -126,32 +101,6 @@ body::before {
 .bg-lower>* {
   position: relative;
   z-index: 10;
-}
-
-.bg-lower::before {
-  content: "";
-  position: absolute;
-  top: -400px;
-  /* 前のセクションへ400px分はみ出す */
-  left: 0;
-  width: 100%;
-  height: calc(100% + 400px);
-  background-image: url('/haikei2.png');
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  /* 上端を非常に長くフェードイン */
-  -webkit-mask-image: linear-gradient(to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0) 100%);
-  z-index: -2;
-  /* bg-upperの背景より後ろに配置 */
-  pointer-events: none;
 }
 
 /* 以前の白いフェードレイヤーなどは不要なので削除 */

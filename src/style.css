@@ -75,15 +75,16 @@ body {
   pointer-events: none;
 }
 
-position: relative;
-margin-top: -150px;
-/* 上の要素と重ねる */
-padding-top: 150px;
-background-image: url('/haikei2.png');
-background-size: cover;
-background-position: center top;
-background-repeat: no-repeat;
-z-index: 2;
+.bg-lower {
+  position: relative;
+  margin-top: -150px;
+  /* 上の要素と重ねる */
+  padding-top: 150px;
+  background-image: url('/haikei2.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 2;
 }
 
 /* bg-lowerの上部にも逆方向の馴染ませを配置 */

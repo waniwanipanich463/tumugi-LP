@@ -288,7 +288,7 @@ footer {
 }
 
 .mockup-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -334,7 +334,7 @@ footer {
 }
 
 .premium-card {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
@@ -349,7 +349,7 @@ footer {
 .mockup-card,
 .faq-item,
 section.faq .premium-card {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(220, 210, 255, 0.4) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;

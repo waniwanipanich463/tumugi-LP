@@ -90,7 +90,6 @@ body::before {
   z-index: -2;
 }
 
-/* 上部背景画像 */
 .bg-upper::before {
   content: "";
   position: absolute;
@@ -98,12 +97,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 140vh;
-  /* さらに長く */
   background-image: url('/haikei1.png');
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
-  /* 境界線を消すため、より中央付近からフェードを開始 */
+  /* 上から下へフェードアウト */
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 10%, transparent 70%);
   mask-image: linear-gradient(to bottom, black 0%, black 10%, transparent 70%);
   z-index: -1;

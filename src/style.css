@@ -53,50 +53,46 @@ body {
   margin: 0;
 }
 
-.bg-upper {
-  background-image: url('/haikei1.png');
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  position: relative;
-  /* mask-imageは一度削除し、別の方法でアプローチします */
+position: relative;
+z-index: 10;
 }
 
 .bg-upper::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
+  /* 隙間を防ぐ */
   left: 0;
   width: 100%;
-  height: 300px;
-  /* 300pxの大胆なグラデーション */
-  background: linear-gradient(to bottom, transparent, var(--color-base) 100%);
-  z-index: 1;
+  height: 400px;
+  /* より大きくぼかす */
+  background: linear-gradient(to bottom, transparent 0%, var(--glass-bg) 40%, var(--color-base) 100%);
+  z-index: 11;
   pointer-events: none;
 }
 
 .bg-lower {
   position: relative;
-  margin-top: -150px;
-  /* 上の要素と重ねる */
-  padding-top: 150px;
+  z-index: 5;
+  margin-top: -200px;
+  /* 重なりを深くする */
+  padding-top: 200px;
   background-image: url('/haikei2.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  z-index: 2;
 }
 
-/* bg-lowerの上部にも逆方向の馴染ませを配置 */
 .bg-lower::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px;
+  /* 隙間を防ぐ */
   left: 0;
   width: 100%;
-  height: 200px;
-  background: linear-gradient(to top, transparent, var(--color-base) 100%);
-  z-index: -1;
+  height: 400px;
+  background: linear-gradient(to top, transparent 0%, var(--glass-bg) 40%, var(--color-base) 100%);
+  z-index: 6;
   pointer-events: none;
 }
 

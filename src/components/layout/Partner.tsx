@@ -1,0 +1,168 @@
+import React from 'react';
+
+export const Partner = () => {
+    return (
+        <>
+            {/* ====== WHAT IS TSUMUGI ====== */}
+            <section className="bg-bg-dark py-24 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-fuchsia/30 to-transparent"></div>
+                <div className="absolute top-1/2 right-0 w-96 h-96 bg-neon-fuchsia/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+                <div className="container-premium max-w-5xl relative z-10">
+                    <h2 className="text-3xl md:text-6xl font-black italic tracking-tighter text-white mb-12 text-center">
+                        つむぎとは<span className="text-neon-fuchsia drop-shadow-[0_0_10px_#FF00FF]">何か？</span>
+                    </h2>
+
+                    <div className="flex flex-col md:flex-row items-center gap-12">
+                        {/* Image */}
+                        <div className="flex-shrink-0 w-full md:w-auto relative group">
+                            <div className="absolute -inset-4 bg-neon-fuchsia/20 blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+                            <img
+                                src="/gazou.png"
+                                alt="つむぎパートナー"
+                                className="relative z-10 w-full md:w-80 lg:w-96 h-auto rounded-xl shadow-[0_0_40px_rgba(255,0,255,0.2)] border border-white/10"
+                            />
+                        </div>
+
+                        {/* Text */}
+                        <div className="flex-1 text-left space-y-6">
+                            <p className="text-lg md:text-xl text-gray-200 leading-loose">
+                                つむぎは、<strong className="text-white">地政学・統計学・世界情勢の知識を統合し</strong>、
+                                分析・解釈・理解を深めるための分析フレームを提示します。
+                            </p>
+
+                            <div className="border-l-4 border-neon-fuchsia/60 pl-6 py-2">
+                                <p className="text-white font-bold text-xl md:text-2xl">
+                                    一般的なAIとは異なる設計思想で構築された専用プロンプトです。
+                                </p>
+                            </div>
+
+                            <p className="text-base md:text-lg text-gray-300 leading-loose">
+                                <strong className="text-white">専用プロンプト</strong>です。
+                            </p>
+                            <p className="text-base md:text-lg text-gray-300 leading-loose">
+                                あなたの質問に対して、<br />
+                                つむぎは<strong className="text-neon-cyan">あなたの利用目的に合わせて活用できる設計です。</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-cyan/30 to-transparent"></div>
+            </section>
+
+            {/* ====== BENEFIT SECTION ====== */}
+            <section className="bg-bg-dark py-24 px-4 cyber-grid relative overflow-hidden">
+                <div className="absolute top-1/4 left-0 w-80 h-80 bg-neon-cyan/8 blur-[100px] rounded-full pointer-events-none"></div>
+
+                <div className="max-w-6xl mx-auto relative z-10">
+                    <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16 mb-14">
+                        {/* Left Side: Header Content */}
+                        <div className="flex-1 text-center md:text-left transition-all duration-700">
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black italic tracking-tighter text-white mb-6">
+                                <span className="whitespace-nowrap">つむぎを手に入れると、</span><br />
+                                <span className="text-neon-cyan drop-shadow-[0_0_10px_#00FFFF] whitespace-nowrap">何が変わるのか</span>
+                            </h2>
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-12">
+                                つむぎは、単に情報を提供するだけではありません。<br />
+                                あなたの思考を拡張し、世界を理解するためのパートナーとして機能します。
+                            </p>
+
+                            {/* Move cards here */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto md:mx-0">
+                                {[
+                                    '世界情勢を構造的に整理するための補助ツールです。',
+                                    '情報の本質を見抜けるようになる',
+                                    '判断材料を整理するプロセスをサポートします。',
+                                    '必要なときに活用できる分析支援プロンプトです。',
+                                ].map((text, i) => (
+                                    <div key={i}
+                                        className="flex items-start gap-4 p-5 rounded-xl transition-all duration-300 hover:scale-[1.02] group/card"
+                                        style={{ background: 'rgba(0,245,255,0.04)', border: '1px solid rgba(0,245,255,0.15)' }}>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-neon-cyan mt-2 shadow-[0_0_8px_#00FFFF] group-hover/card:scale-125 transition-transform"></div>
+                                        <p className="text-white/90 font-medium text-sm md:text-base leading-relaxed flex-1">{text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right Side: Image */}
+                        <div className="flex-1 relative">
+                            <div className="absolute -inset-4 bg-neon-cyan/20 blur-3xl opacity-40"></div>
+                            <img
+                                src="/gazou_2.png"
+                                alt="つむぎ 変化"
+                                className="relative z-10 w-full max-w-[480px] mx-auto h-auto rounded-2xl shadow-[0_0_40px_rgba(0,245,255,0.15)] border border-white/10"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="mt-12 text-center md:text-left">
+                        <p className="text-white font-bold text-xl md:text-2xl border-l-4 border-neon-cyan/40 pl-6">
+                            つむぎは、あなたの思考を支える存在になります。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ====== HOW IT WORKS ====== */}
+            <section className="bg-bg-dark py-24 px-4 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-fuchsia/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(191,0,255,0.06)_0%,transparent_70%)] pointer-events-none"></div>
+
+                <div className="max-w-6xl mx-auto relative z-10">
+                    <div className="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-16 mb-12">
+                        {/* Right Side: Content */}
+                        <div className="flex-1 text-center md:text-left">
+                            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-white mb-8 text-center md:text-left">
+                                どのように<span className="text-neon-fuchsia drop-shadow-[0_0_10px_#FF00FF]">機能するのか</span>
+                            </h2>
+
+                            <p className="text-gray-300 text-base md:text-lg leading-loose text-center md:text-left mb-10">
+                                この専用プロンプトを使用することで、<br />
+                                つむぎはあなた専用のAIパートナーとして動作します。
+                            </p>
+
+                            <div className="mb-10">
+                                <p className="text-gray-400 text-xs md:text-sm text-center md:text-left mb-6 font-mono border-b border-white/5 pb-2 inline-block">// あなたの質問に対して、以下を統合した視点で回答します</p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                    {[
+                                        { label: '地政学', desc: '国家・権力・地理の構造' },
+                                        { label: '統計学', desc: 'データで世界を読む視点' },
+                                        { label: '世界情勢', desc: 'リアルタイムな情勢分析' },
+                                    ].map((item, i) => (
+                                        <div key={i}
+                                            className="text-center p-4 rounded-xl transition-all duration-300 hover:scale-[1.02]"
+                                            style={{ background: 'rgba(0,245,255,0.05)', border: '1px solid rgba(0,245,255,0.2)' }}>
+                                            <p className="text-white font-black text-sm mb-1">{item.label}</p>
+                                            <p className="text-gray-400 text-[10px] leading-tight">{item.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Left Side: Image */}
+                        <div className="flex-1 relative">
+                            <div className="absolute -inset-4 bg-neon-fuchsia/20 blur-3xl opacity-40"></div>
+                            <img
+                                src="/gazou_3.png"
+                                alt="つむぎ 機能"
+                                className="relative z-10 w-full max-w-[480px] mx-auto h-auto rounded-2xl shadow-[0_0_40px_rgba(255,0,255,0.15)] border border-white/10"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div className="text-center space-y-3">
+                        <p className="text-gray-400 text-base">それは、</p>
+                        <p className="text-white font-bold text-xl md:text-2xl">
+                            単なる回答ではなく、<br />
+                            <span className="text-neon-cyan">理解を深めるための分析フレームを提示します。</span>
+                        </p>
+                    </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-cyan/30 to-transparent"></div>
+            </section>
+        </>
+    );
+};

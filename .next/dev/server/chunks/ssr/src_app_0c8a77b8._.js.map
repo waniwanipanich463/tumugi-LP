@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/niwanoshouta/Desktop/antigravity/%E3%81%A4%E3%82%80%E3%81%8D%E3%82%99LP/src/app/icon.png.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 2048, height: 2048 }\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,uIAAG;IAAE,OAAO;IAAM,QAAQ;AAAK"}}]
+}

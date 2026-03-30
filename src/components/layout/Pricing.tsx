@@ -335,9 +335,9 @@ export const Pricing = () => {
 
                         {/* Definition of Permanent Access */}
                         <div>
-                            <h4 className="text-gray-500 text-sm font-black tracking-widest mb-6 uppercase flex items-center gap-4">
+                            <h4 className="text-gray-500 text-sm font-black tracking-widest mb-6 uppercase flex flex-col sm:flex-row items-center gap-4">
                                 <span>【永続アクセスの定義】</span>
-                                <div className="h-[1px] flex-grow bg-white/10"></div>
+                                <div className="h-[1px] w-full sm:flex-grow bg-white/10 hidden sm:block"></div>
                             </h4>
                             <p className="text-gray-400 text-xs xs:text-sm md:text-base leading-relaxed pl-0 sm:pl-6 border-l-0 sm:border-l border-white/20 text-center sm:text-left">
                                 <span className="sm:hidden block">
@@ -376,9 +376,8 @@ export const Pricing = () => {
                                     <span className="hidden sm:inline">これは、誰でも使えるAIではありません。</span>
                                 </p>
                                 <div className="border-l-4 border-neon-cyan/60 pl-6 py-2 text-left">
-                                    <p className="text-white font-bold text-lg xs:text-xl md:text-2xl">
-                                        <span className="sm:hidden block">あなたのための<br />専用プロンプトです。</span>
-                                        <span className="hidden sm:inline">あなたのための専用プロンプトです。</span>
+                                    <p className="text-white font-bold text-[15px] xs:text-xl md:text-2xl whitespace-nowrap sm:whitespace-normal">
+                                        あなたのための専用プロンプトです。
                                     </p>
                                 </div>
                                 <p className="text-gray-300 text-sm xs:text-base md:text-lg leading-loose">

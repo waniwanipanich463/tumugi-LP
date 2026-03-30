@@ -100,7 +100,7 @@ export const Partner = () => {
                                         className="flex items-start gap-3 p-4 rounded-xl transition-all duration-300 hover:scale-[1.02] group/card overflow-hidden"
                                         style={{ background: 'rgba(0,245,255,0.04)', border: '1px solid rgba(0,245,255,0.15)' }}>
                                         <div className="w-1.5 h-1.5 rounded-full bg-neon-cyan mt-1.5 shadow-[0_0_8px_#00FFFF] group-hover/card:scale-125 transition-transform flex-shrink-0"></div>
-                                        <p className="text-white/90 font-medium text-[11px] xs:text-xs md:text-base leading-relaxed flex-1 whitespace-nowrap overflow-hidden text-ellipsis">{text}</p>
+                                        <p className="text-white/90 font-medium text-[11px] xs:text-xs md:text-base leading-relaxed flex-1 text-left">{text}</p>
                                     </div>
                                 ))}
                             </div>

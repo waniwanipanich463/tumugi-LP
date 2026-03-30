@@ -339,7 +339,7 @@ export const Pricing = () => {
                                 <span>【永続アクセスの定義】</span>
                                 <div className="h-[1px] flex-grow bg-white/10"></div>
                             </h4>
-                            <p className="text-gray-400 text-xs xs:text-sm md:text-base leading-relaxed pl-6 border-l border-white/20 text-left">
+                            <p className="text-gray-400 text-xs xs:text-sm md:text-base leading-relaxed pl-0 sm:pl-6 border-l-0 sm:border-l border-white/20 text-center sm:text-left">
                                 <span className="sm:hidden block">
                                     本サービスが継続して提供される限り<br />
                                     利用可能であることを指します。

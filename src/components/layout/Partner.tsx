@@ -41,7 +41,7 @@ export const Partner = () => {
 
                             <div className="border-l-0 sm:border-l-4 border-neon-fuchsia/60 pl-0 sm:pl-6 py-2 text-center sm:text-left">
                                 <p className="text-white font-bold text-[12px] xs:text-[13px] sm:text-base md:text-xl md:whitespace-nowrap tracking-tighter md:tracking-normal">
-                                    一般的なAIとは異なる設計思想で構築された専用プロンプトです。
+                                    一般的なAIとは異なる設計思想で構築された<br className="sm:hidden" />専用プロンプトです。
                                 </p>
                             </div>
 

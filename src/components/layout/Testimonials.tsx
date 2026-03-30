@@ -66,12 +66,12 @@ export const Testimonials = () => {
                             </div>
 
                             {/* Title */}
-                            <h4 className="text-white font-black text-lg mb-6 leading-snug border-l-0 sm:border-l-2 border-neon-cyan/40 pl-0 sm:pl-4 text-center sm:text-left">
+                            <h4 className="text-white font-black text-lg mb-6 leading-snug border-l-2 border-neon-cyan/40 pl-4">
                                 {item.title}
                             </h4>
 
                             {/* Content */}
-                            <div className="text-gray-400 text-sm leading-relaxed whitespace-pre-wrap flex-grow text-center sm:text-left">
+                            <div className="text-gray-400 text-sm leading-relaxed whitespace-pre-wrap flex-grow">
                                 {item.content}
                             </div>
 

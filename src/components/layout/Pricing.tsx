@@ -175,7 +175,7 @@ export const Pricing = () => {
                                 >
                                     <div className="mb-12">
                                         <h3 className="text-[11px] xs:text-xs font-black text-neon-cyan tracking-[0.1em] xs:tracking-[0.3em] mb-6 uppercase whitespace-nowrap overflow-hidden text-ellipsis">{plan.title}</h3>
-                                        <div className="flex items-baseline gap-2 mb-2 whitespace-nowrap overflow-hidden">
+                                        <div className="flex items-baseline justify-center md:justify-start gap-2 mb-2 whitespace-nowrap overflow-hidden">
                                             <span className="text-4xl xs:text-6xl font-black text-white tracking-tighter italic">{plan.price}</span>
                                             <span className="text-text-dim font-mono text-xs xs:text-sm uppercase">{plan.unit}</span>
                                         </div>
@@ -222,7 +222,7 @@ export const Pricing = () => {
                                         <span>【商品仕様】</span>
                                         <div className="h-[1px] flex-grow bg-neon-cyan/20"></div>
                                     </h4>
-                                    <ul className="space-y-3 text-gray-400 text-[13px] pl-0 sm:pl-4 border-l-0 sm:border-l border-neon-cyan/30 text-center sm:text-left">
+                                    <ul className="space-y-3 text-gray-400 text-[13px] pl-4 border-l border-neon-cyan/30 text-left">
                                         <li>・提供形式：AIコンテンツ（デジタルコンテンツ）</li>
                                         <li>・提供方法：オンライン上で閲覧・利用可能</li>
                                         <li>・対応AI：Gemini（Gem）</li>
@@ -252,7 +252,7 @@ export const Pricing = () => {
                                         <span>【利用に関する注意事項】</span>
                                         <div className="h-[1px] flex-grow bg-neon-fuchsia/20"></div>
                                     </h4>
-                                    <div className="space-y-4 text-gray-400 text-[13px] pl-0 sm:pl-4 border-l-0 sm:border-l border-neon-fuchsia/30 leading-relaxed text-center sm:text-left">
+                                    <div className="space-y-4 text-gray-400 text-[13px] pl-4 border-l border-neon-fuchsia/30 leading-relaxed text-left">
                                         <p>
                                             本商品は、思考整理や分析をサポートするためのツールです。<br />
                                             特定の結果や成果を保証するものではありません。
@@ -282,7 +282,7 @@ export const Pricing = () => {
                                                 <span className="sm:hidden">この価格は「情報の値段」<br />ではありません。</span>
                                                 <span className="hidden sm:inline">この価格は「情報の値段」ではありません。</span>
                                             </p>
-                                            <ul className="space-y-4 text-gray-400 text-sm border-l-0 sm:border-l-2 border-neon-fuchsia/30 pl-0 sm:pl-6 text-center sm:text-left">
+                                            <ul className="space-y-4 text-gray-400 text-sm border-l-2 border-neon-fuchsia/30 pl-6 text-left">
                                                 <li>・設計思想の体系化</li>
                                                 <li>・長期的なアップデート</li>
                                                 <li>・継続利用を前提とした構造設計</li>
@@ -339,7 +339,7 @@ export const Pricing = () => {
                                 <span>【永続アクセスの定義】</span>
                                 <div className="h-[1px] flex-grow bg-white/10"></div>
                             </h4>
-                            <p className="text-gray-400 text-xs xs:text-sm md:text-base leading-relaxed pl-0 sm:pl-6 border-l-0 sm:border-l border-white/20 text-center sm:text-left">
+                            <p className="text-gray-400 text-xs xs:text-sm md:text-base leading-relaxed pl-6 border-l border-white/20 text-left">
                                 <span className="sm:hidden block">
                                     本サービスが継続して提供される限り<br />
                                     利用可能であることを指します。
@@ -375,7 +375,7 @@ export const Pricing = () => {
                                     <span className="sm:hidden block">これは、誰でも使えるAIではありません。</span>
                                     <span className="hidden sm:inline">これは、誰でも使えるAIではありません。</span>
                                 </p>
-                                <div className="border-l-0 sm:border-l-4 border-neon-cyan/60 pl-0 sm:pl-6 py-2 text-center sm:text-left">
+                                <div className="border-l-4 border-neon-cyan/60 pl-6 py-2 text-left">
                                     <p className="text-white font-bold text-lg xs:text-xl md:text-2xl">
                                         <span className="sm:hidden block">あなたのための<br />専用プロンプトです。</span>
                                         <span className="hidden sm:inline">あなたのための専用プロンプトです。</span>

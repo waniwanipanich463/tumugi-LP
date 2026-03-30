@@ -375,7 +375,7 @@ export const Pricing = () => {
                                     <span className="sm:hidden block">これは、誰でも使えるAIではありません。</span>
                                     <span className="hidden sm:inline">これは、誰でも使えるAIではありません。</span>
                                 </p>
-                                <div className="border-l-4 border-neon-cyan/60 pl-6 py-2 text-left">
+                                <div className="border-l-0 sm:border-l-4 border-neon-cyan/60 pl-0 sm:pl-6 py-2 text-center sm:text-left">
                                     <p className="text-white font-bold text-[15px] xs:text-xl md:text-2xl whitespace-nowrap sm:whitespace-normal">
                                         あなたのための専用プロンプトです。
                                     </p>

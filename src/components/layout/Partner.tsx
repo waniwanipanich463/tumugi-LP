@@ -10,7 +10,7 @@ export const Partner = () => {
 
                 <div className="container-premium max-w-5xl relative z-10">
                     <h2 className="text-3xl md:text-6xl font-black italic tracking-tighter text-white mb-12 text-center">
-                        つむぎとは<span className="text-neon-fuchsia drop-shadow-[0_0_10px_#FF00FF]">何か？</span>
+                        <span className="whitespace-nowrap sm:whitespace-normal text-[1.35rem] sm:text-3xl md:text-6xl">「資産を育てるつむぎ」とは<span className="text-neon-fuchsia drop-shadow-[0_0_10px_#FF00FF]">何か？</span></span>
                     </h2>
 
                     <div className="flex flex-col md:flex-row items-center gap-12">
@@ -25,24 +25,37 @@ export const Partner = () => {
                         </div>
 
                         {/* Text */}
-                        <div className="flex-1 text-left space-y-6">
-                            <p className="text-lg md:text-xl text-gray-200 leading-loose">
-                                つむぎは、<strong className="text-white">地政学・統計学・世界情勢の知識を統合し</strong>、
-                                分析・解釈・理解を深めるための分析フレームを提示します。
+                        <div className="flex-1 text-center md:text-left space-y-6">
+                            <p className="text-[13px] xs:text-base md:text-xl text-gray-200 leading-loose">
+                                <span className="sm:hidden">
+                                    「資産を育てるつむぎ」は、<br />
+                                    地政学・統計学・<br className="xs:hidden" />世界情勢の知識を統合し、<br />
+                                    分析・解釈・理解を深めるための<br />
+                                    分析フレームを提示します。
+                                </span>
+                                <span className="hidden sm:inline">
+                                    「資産を育てるつむぎ」は、<strong className="text-white">地政学・統計学・世界情勢の知識を統合し、</strong><br />
+                                    分析・解釈・理解を深めるための分析フレームを提示します。
+                                </span>
                             </p>
 
-                            <div className="border-l-4 border-neon-fuchsia/60 pl-6 py-2">
-                                <p className="text-white font-bold text-xl md:text-2xl">
+                            <div className="border-l-0 sm:border-l-4 border-neon-fuchsia/60 pl-0 sm:pl-6 py-2 text-center sm:text-left">
+                                <p className="text-white font-bold text-[12px] xs:text-[13px] sm:text-base md:text-xl md:whitespace-nowrap tracking-tighter md:tracking-normal">
                                     一般的なAIとは異なる設計思想で構築された専用プロンプトです。
                                 </p>
                             </div>
 
-                            <p className="text-base md:text-lg text-gray-300 leading-loose">
-                                <strong className="text-white">専用プロンプト</strong>です。
-                            </p>
-                            <p className="text-base md:text-lg text-gray-300 leading-loose">
-                                あなたの質問に対して、<br />
-                                つむぎは<strong className="text-neon-cyan">あなたの利用目的に合わせて活用できる設計です。</strong>
+
+                            <p className="text-[13px] xs:text-base md:text-lg text-gray-300 leading-loose">
+                                <span className="sm:hidden">
+                                    あなたの質問に対して、<br />
+                                    「資産を育てるつむぎ」は<br />
+                                    <strong className="text-neon-cyan">あなたの利用目的に合わせて<br />活用できる設計です。</strong>
+                                </span>
+                                <span className="hidden sm:inline">
+                                    あなたの質問に対して、<br />
+                                    「資産を育てるつむぎ」は<strong className="text-neon-cyan">あなたの利用目的に合わせて活用できる設計です。</strong>
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -58,13 +71,21 @@ export const Partner = () => {
                     <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16 mb-14">
                         {/* Left Side: Header Content */}
                         <div className="flex-1 text-center md:text-left transition-all duration-700">
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black italic tracking-tighter text-white mb-6">
-                                <span className="whitespace-nowrap">つむぎを手に入れると、</span><br />
-                                <span className="text-neon-cyan drop-shadow-[0_0_10px_#00FFFF] whitespace-nowrap">何が変わるのか</span>
+                            <h2 className="flex flex-col gap-2 font-black italic tracking-tighter text-white mb-6">
+                                <span className="text-xl md:text-2xl lg:text-3xl whitespace-nowrap">「資産を育てるつむぎ」を手に入れると、</span>
+                                <span className="text-neon-cyan drop-shadow-[0_0_10px_#00FFFF] text-5xl md:text-6xl lg:text-[5rem] tracking-tight">何が変わるのか</span>
                             </h2>
                             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-12">
-                                つむぎは、単に情報を提供するだけではありません。<br />
-                                あなたの思考を拡張し、世界を理解するためのパートナーとして機能します。
+                                <span className="sm:hidden">
+                                    「資産を育てるつむぎ」は、<br />
+                                    単に情報を提供するだけではありません。<br />
+                                    あなたの思考を拡張し、世界を理解するための<br />
+                                    パートナーとして機能します。
+                                </span>
+                                <span className="hidden sm:inline">
+                                    「資産を育てるつむぎ」は、単に情報を提供するだけではありません。<br />
+                                    あなたの思考を拡張し、世界を理解するためのパートナーとして機能します。
+                                </span>
                             </p>
 
                             {/* Move cards here */}
@@ -76,29 +97,35 @@ export const Partner = () => {
                                     '必要なときに活用できる分析支援プロンプトです。',
                                 ].map((text, i) => (
                                     <div key={i}
-                                        className="flex items-start gap-4 p-5 rounded-xl transition-all duration-300 hover:scale-[1.02] group/card"
+                                        className="flex items-start gap-3 p-4 rounded-xl transition-all duration-300 hover:scale-[1.02] group/card overflow-hidden"
                                         style={{ background: 'rgba(0,245,255,0.04)', border: '1px solid rgba(0,245,255,0.15)' }}>
-                                        <div className="w-1.5 h-1.5 rounded-full bg-neon-cyan mt-2 shadow-[0_0_8px_#00FFFF] group-hover/card:scale-125 transition-transform"></div>
-                                        <p className="text-white/90 font-medium text-sm md:text-base leading-relaxed flex-1">{text}</p>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-neon-cyan mt-1.5 shadow-[0_0_8px_#00FFFF] group-hover/card:scale-125 transition-transform flex-shrink-0"></div>
+                                        <p className="text-white/90 font-medium text-[11px] xs:text-xs md:text-base leading-relaxed flex-1 whitespace-nowrap overflow-hidden text-ellipsis">{text}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
                         {/* Right Side: Image */}
-                        <div className="flex-1 relative">
+                        <div className="w-full md:w-1/2 lg:w-5/12 relative flex-shrink-0">
                             <div className="absolute -inset-4 bg-neon-cyan/20 blur-3xl opacity-40"></div>
                             <img
                                 src="/gazou_2.png"
                                 alt="つむぎ 変化"
-                                className="relative z-10 w-full max-w-[480px] mx-auto h-auto rounded-2xl shadow-[0_0_40px_rgba(0,245,255,0.15)] border border-white/10"
+                                className="relative z-10 w-full max-w-[500px] ml-auto h-auto rounded-2xl shadow-[0_0_40px_rgba(0,245,255,0.15)] border border-white/10"
                             />
                         </div>
                     </div>
 
                     <div className="mt-12 text-center md:text-left">
-                        <p className="text-white font-bold text-xl md:text-2xl border-l-4 border-neon-cyan/40 pl-6">
-                            つむぎは、あなたの思考を支える存在になります。
+                        <p className="text-white font-bold text-xl md:text-2xl border-l-0 sm:border-l-4 border-neon-cyan/40 pl-0 sm:pl-6 text-center sm:text-left">
+                            <span className="sm:hidden text-[17px] xs:text-xl block">
+                                「資産を育てるつむぎ」は、<br />
+                                あなたの思考を支える存在になります。
+                            </span>
+                            <span className="hidden sm:inline">
+                                「資産を育てるつむぎ」は、あなたの思考を支える存在になります。
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -118,8 +145,15 @@ export const Partner = () => {
                             </h2>
 
                             <p className="text-gray-300 text-base md:text-lg leading-loose text-center md:text-left mb-10">
-                                この専用プロンプトを使用することで、<br />
-                                つむぎはあなた専用のAIパートナーとして動作します。
+                                <span className="sm:hidden text-sm xs:text-base">
+                                    この専用プロンプトを使用することで、<br />
+                                    「資産を育てるつむぎ」はあなた専用の<br />
+                                    AIパートナーとして動作します。
+                                </span>
+                                <span className="hidden sm:inline text-[15px] xs:text-base md:text-lg">
+                                    この専用プロンプトを使用することで、<br />
+                                    「資産を育てるつむぎ」はあなた専用のAIパートナーとして動作します。
+                                </span>
                             </p>
 
                             <div className="mb-10">
@@ -155,9 +189,10 @@ export const Partner = () => {
 
                     <div className="text-center space-y-3">
                         <p className="text-gray-400 text-base">それは、</p>
-                        <p className="text-white font-bold text-xl md:text-2xl">
+                        <p className="text-white font-bold text-lg xs:text-xl md:text-2xl">
                             単なる回答ではなく、<br />
-                            <span className="text-neon-cyan">理解を深めるための分析フレームを提示します。</span>
+                            <span className="text-neon-cyan sm:hidden text-[15px] xs:text-lg">理解を深めるための<br />分析フレームを提示します。</span>
+                            <span className="text-neon-cyan hidden sm:inline">理解を深めるための分析フレームを提示します。</span>
                         </p>
                     </div>
                 </div>

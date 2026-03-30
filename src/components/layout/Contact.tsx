@@ -10,14 +10,8 @@ export const Contact = () => {
         setStatus('loading');
 
         const form = new FormData(e.currentTarget);
-        // 環境変数が無い場合は、以前のスクリーンショットから判明している固有IDを直接使用します
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xeeldnlj';
-
-        if (!formId) {
-            console.error('Formspree ID is not configured.');
-            setStatus('error');
-            return;
-        }
+        // ユーザーから提供された新しい Formspree ID: mzdjzawj
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mzdjzawj';
 
         // Formspree に提出
         try {
@@ -63,9 +57,15 @@ export const Contact = () => {
                 <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-white text-center mb-4">
                     ご不明な点が<span className="text-neon-cyan drop-shadow-[0_0_10px_#00FFFF]">ある場合</span>
                 </h2>
-                <p className="text-gray-400 text-center text-sm md:text-base leading-relaxed mb-10">
-                    つむぎについてのご質問や不明点がある場合は、<br />
-                    以下の送信フォームよりお問い合わせください。
+                <p className="text-gray-400 text-center leading-relaxed mb-10">
+                    <span className="sm:hidden block text-[11px] xs:text-sm">
+                        「資産を育てるつむぎ」についてのご質問や不明点がある場合は、<br />
+                        以下の送信フォームよりお問い合わせください。
+                    </span>
+                    <span className="hidden sm:inline text-sm md:text-base">
+                        「資産を育てるつむぎ」についてのご質問や不明点がある場合は、<br />
+                        以下の送信フォームよりお問い合わせください。
+                    </span>
                 </p>
 
                 {/* Form */}
@@ -79,8 +79,7 @@ export const Contact = () => {
                     }}
                 >
                     <form
-                        action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xeeldnlj'}`}
-                        method="POST"
+                        onSubmit={handleSubmit}
                         className="flex flex-col gap-5"
                     >
                         {/* Name */}

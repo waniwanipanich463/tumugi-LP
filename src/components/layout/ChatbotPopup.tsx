@@ -62,22 +62,18 @@ const FAQ_DATA: Record<string, { answer: string; nextOptions: string[] }> = {
     },
 };
 
+const FINAL_OPTIONS = ['限定動画を見る', 'プランを見る', '他の質問をする'];
+const INITIAL_OPTIONS = ['まだよく分かっていない', '内容は理解している', '購入を検討している', '他の質問がある'];
+
 export const ChatbotPopup = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         {
             role: 'assistant',
-            content: 'はじめまして。\nつむぎ部屋についてのご質問にお答えできます。\n気になる項目を選択してください。',
+            content: 'こんにちは。\n「資産を育てるつむぎ」について、目的に合わせてご案内できます。\n今、どの段階ですか？',
         },
     ]);
-    const [currentOptions, setCurrentOptions] = useState<string[]>([
-        '初心者でも使えますか？',
-        '何ができるのですか？',
-        '自分に向いているか知りたい',
-        'ChatGPT無料版でも使えますか？',
-        '購入方法について',
-        'まだ迷っています'
-    ]);
+    const [currentOptions, setCurrentOptions] = useState<string[]>(INITIAL_OPTIONS);
     const [isTyping, setIsTyping] = useState(false);
     const [hasNewMessage, setHasNewMessage] = useState(false);
     const [autoPrompted, setAutoPrompted] = useState(false);
@@ -100,21 +96,22 @@ export const ChatbotPopup = () => {
         return () => clearTimeout(timer);
     }, [isOpen, autoPrompted]);
 
-    // 40-second auto-prompt
+    // 45-second auto-prompt
     useEffect(() => {
         const timer = setTimeout(() => {
             if (!autoPrompted) {
                 setAutoPrompted(true);
                 if (!isOpen) {
                     setHasNewMessage(true);
+                    setIsOpen(true); // Auto open
                 }
                 setMessages(prev => [
                     ...prev,
-                    { role: 'assistant', content: '限定動画はご覧になりましたか？' }
+                    { role: 'assistant', content: '迷っている方へ\nまずは限定動画で設計思想を確認することをおすすめします。' }
                 ]);
-                setCurrentOptions(['まだです', '見ました']);
+                setCurrentOptions(['買い切りを見る', '限定動画を見る']);
             }
-        }, 40000);
+        }, 45000);
         return () => clearTimeout(timer);
     }, [autoPrompted, isOpen]);
 
@@ -128,31 +125,77 @@ export const ChatbotPopup = () => {
             let assistantMsg: Message;
             let nextOps: string[] = [];
 
-            if (option === 'まだです') {
-                assistantMsg = { role: 'assistant', content: 'まずは限定動画をご覧ください。\n自分の価値を言語化するヒントが見つかるはずです。', isCTA: true, ctaLabel: '▶ 限定動画を見る', ctaAction: 'video' };
-                nextOps = ['動画を見ました', '他の質問をする'];
-            } else if (option === '見ました' || option === '動画を見ました') {
-                assistantMsg = { role: 'assistant', content: '動画をご覧いただきありがとうございます！\nプロンプトを活用して、あなたの理想の未来を一緒に作り上げましょう。', isCTA: true, ctaLabel: '▶ プロンプトを入手する', ctaAction: 'buy' };
-                nextOps = ['初心者でも使えますか？', '他の質問をする'];
-            } else if (option === '限定動画を見る') {
-                document.getElementById('video')?.scrollIntoView({ behavior: 'smooth' });
-                assistantMsg = { role: 'assistant', content: '動画セクションへ移動しました。ぜひ最後までご覧ください。' };
-                nextOps = ['動画を見終えた', '他の質問をする'];
-            } else if (option === '購入方法を見る' || option === '購入方法について' || option === 'すぐに始める' || option === 'プロンプトを入手する') {
-                assistantMsg = { role: 'assistant', content: 'すぐに始めることができます。', isCTA: true, ctaLabel: '▶ つむぎ部屋に参加する', ctaAction: 'buy' };
-                nextOps = ['他の質問をする'];
-            } else if (option === '他の質問をする') {
-                assistantMsg = { role: 'assistant', content: '気になる項目を選択してください。' };
-                nextOps = ['初心者でも使えますか？', '何ができるのですか？', '自分に向いているか知りたい', 'ChatGPT無料版でも使えますか？', '購入方法について', 'まだ迷っています'];
-            } else {
-                const data = FAQ_DATA[option];
-                if (data) {
-                    assistantMsg = { role: 'assistant', content: data.answer };
-                    nextOps = data.nextOptions;
-                } else {
-                    assistantMsg = { role: 'assistant', content: '申し訳ありません、その質問についてはLINEサポートにお問い合わせください。' };
-                    nextOps = ['他の質問をする'];
-                }
+            switch (option) {
+                // ---- STEP 1: Initial Options (A, B, C, D) ----
+                case 'まだよく分かっていない':
+                    assistantMsg = { role: 'assistant', content: '「資産を育てるつむぎ」は、\n思考を構造的に整理するための専用プロンプトです。\nまずは設計思想を確認しますか？' };
+                    nextOps = ['限定動画を見る', '何ができるか知りたい'];
+                    break;
+                case '内容は理解している':
+                    assistantMsg = { role: 'assistant', content: '現在どの段階でしょうか？' };
+                    nextOps = ['自分に向いているか知りたい', '価格について知りたい', '購入方法を見る'];
+                    break;
+                case '購入を検討している':
+                    assistantMsg = { role: 'assistant', content: 'ご不安な点はありますか？' };
+                    nextOps = ['自分に合うか不安', '高額なので迷っている', '返金や解約について', '今すぐ始めたい'];
+                    break;
+                case '他の質問がある':
+                case '他の質問をする':
+                    assistantMsg = { role: 'assistant', content: 'こんにちは。\n「資産を育てるつむぎ」について、目的に合わせてご案内できます。\n今、どの段階ですか？' };
+                    nextOps = INITIAL_OPTIONS;
+                    break;
+
+                // ---- STEP 2 & 3: Branches ----
+                case '自分に向いているか知りたい':
+                case '自分に合うか不安':
+                    assistantMsg = { role: 'assistant', content: '以下に当てはまりますか？\n・方向性を整理したい\n・AIを活用したい\n・長期視点を持ちたい\n\n当てはまる場合は適しています。\n即効性を求める場合は向いていません。' };
+                    nextOps = ['プランを見る', 'もう少し詳しく知る'];
+                    break;
+                case '高額なので迷っている':
+                    assistantMsg = { role: 'assistant', content: '価格は安くありません。\n\nこの商品は、\n短期的な成果ではなく\n長期的な思考基盤への投資を前提としています。' };
+                    nextOps = ['買い切りを見る', '限定動画を見る'];
+                    break;
+                case '返金や解約について':
+                    assistantMsg = { role: 'assistant', content: '買い切りはデジタル商品のため原則返金不可となります。ご不明な点があれば事前にお問い合わせください。' };
+                    nextOps = ['特商法を見る', 'プランに進む'];
+                    break;
+
+                // ---- Direct Actions (Scrolls & Links) ----
+                case '限定動画を見る':
+                case '何ができるか知りたい':
+                case 'もう少し詳しく知る':
+                    document.getElementById('video')?.scrollIntoView({ behavior: 'smooth' });
+                    assistantMsg = { role: 'assistant', content: '動画セクションへ表示を移動しました。' };
+                    nextOps = FINAL_OPTIONS;
+                    break;
+
+                case 'プランを見る':
+                case '価格について知りたい':
+                case '購入方法を見る':
+                case '買い切りを見る':
+                case 'プランに進む':
+                case '今すぐ始めたい':
+                    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                    assistantMsg = { role: 'assistant', content: '料金プランセクションへ移動しました。' };
+                    nextOps = FINAL_OPTIONS;
+                    break;
+
+                case '特商法を見る':
+                    window.open('/legal', '_blank');
+                    assistantMsg = { role: 'assistant', content: '特定商取引法に基づく表記を新しいタブで開きました。' };
+                    nextOps = FINAL_OPTIONS;
+                    break;
+
+                // FAQ Fallbacks
+                default:
+                    const data = FAQ_DATA[option];
+                    if (data) {
+                        assistantMsg = { role: 'assistant', content: data.answer };
+                        nextOps = data.nextOptions;
+                    } else {
+                        assistantMsg = { role: 'assistant', content: 'ご質問ありがとうございます。より詳細な相談が必要な場合は、LINEサポートもご活用ください。' };
+                        nextOps = FINAL_OPTIONS;
+                    }
             }
 
             setMessages(prev => [...prev, assistantMsg]);
@@ -172,7 +215,7 @@ export const ChatbotPopup = () => {
     return (
         <>
             {/* Floating Button with Label */}
-            <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+            <div className="fixed bottom-6 right-6 z-[10001] flex flex-col items-end gap-3">
                 {/* Notification bubble */}
                 {hasNewMessage && !isOpen && (
                     <div
@@ -180,7 +223,7 @@ export const ChatbotPopup = () => {
                         style={{ boxShadow: '0 0 15px rgba(0,255,255,0.2)' }}
                     >
                         <p className="leading-snug">
-                            {autoPrompted ? '限定動画はご覧になりましたか？' : '何かご質問はありますか？😊'}
+                            {autoPrompted ? '限定動画はご覧になりましたか？' : '何かご質問はありますか？'}
                         </p>
                         <div className="absolute -bottom-2 right-4 w-3 h-3 bg-black/80 border-r border-b border-neon-cyan/40 rotate-45 translate-y-1" />
                     </div>
@@ -219,7 +262,7 @@ export const ChatbotPopup = () => {
 
             {/* Chat Window */}
             <div
-                className={`fixed bottom-24 right-6 z-50 w-[340px] sm:w-[400px] transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}
+                className={`fixed bottom-24 right-6 z-[10001] w-[340px] sm:w-[400px] transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}
             >
                 <div
                     className="rounded-2xl overflow-hidden shadow-2xl flex flex-col"

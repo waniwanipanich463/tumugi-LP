@@ -335,8 +335,8 @@ export const Pricing = () => {
 
                         {/* Definition of Permanent Access */}
                         <div>
-                            <h4 className="text-gray-500 text-sm font-black tracking-widest mb-6 uppercase flex flex-col sm:flex-row items-center gap-4">
-                                <span>【永続アクセスの定義】</span>
+                            <h4 className="text-gray-500 text-sm font-black tracking-widest mb-6 uppercase flex sm:flex-row items-center gap-4 text-center sm:text-left">
+                                <span className="whitespace-nowrap w-full sm:w-auto">【永続アクセスの定義】</span>
                                 <div className="h-[1px] w-full sm:flex-grow bg-white/10 hidden sm:block"></div>
                             </h4>
                             <p className="text-gray-400 text-xs xs:text-sm md:text-base leading-relaxed pl-0 sm:pl-6 border-l-0 sm:border-l border-white/20 text-center sm:text-left">

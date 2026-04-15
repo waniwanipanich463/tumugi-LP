@@ -25,7 +25,7 @@ const plans = [
             { text: 'サービス継続期間中の永続アクセス', included: true },
             { text: '一度の支払いで完結', included: true },
         ],
-        buttonText: '「資産を育てるつむぎ」を購入する',
+        buttonText: '100歳まで安心するための“出口戦略”を今すぐ受け取る',
         highlighted: true,
         note: '',
         priceId: 'price_1T5gTqFu22Cfk29Fcs4MuzJB',
@@ -201,7 +201,7 @@ export const Pricing = () => {
                                     <button
                                         onClick={() => handleCheckout(plan.priceId, plan.mode)}
                                         disabled={loading !== null}
-                                        className={`cyber-button w-full text-sm md:text-base mt-auto ${plan.highlighted ? '!border-neon-fuchsia !text-neon-fuchsia hover:!bg-neon-fuchsia hover:!text-white hover:shadow-[0_0_20px_#FF00FF]' : ''} ${loading === plan.priceId ? 'opacity-50 cursor-wait' : ''}`}
+                                        className={`cyber-button w-full text-[10px] xs:text-[11px] sm:text-[12px] md:text-sm lg:text-base tracking-tighter mt-auto px-1 ${plan.highlighted ? '!border-neon-fuchsia !text-neon-fuchsia hover:!bg-neon-fuchsia hover:!text-white hover:shadow-[0_0_20px_#FF00FF]' : ''} ${loading === plan.priceId ? 'opacity-50 cursor-wait' : ''}`}
                                     >
                                         {loading === plan.priceId ? '準備中...' : plan.buttonText}
                                     </button>
@@ -396,12 +396,12 @@ export const Pricing = () => {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col items-center md:items-start gap-4">
+                            <div className="flex flex-col items-center md:items-start gap-4 w-full">
                                 <button
                                     onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="cyber-button text-lg xs:text-xl px-12 py-5 group overflow-hidden relative"
+                                    className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg px-2 xs:px-4 sm:px-8 md:px-12 py-3 sm:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto md:mx-0"
                                 >
-                                    <span className="relative z-10 font-black whitespace-nowrap">「資産を育てるつむぎ」を購入する</span>
+                                    <span className="relative z-10 font-black whitespace-nowrap tracking-tighter">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
                                 </button>
                             </div>
                         </div>

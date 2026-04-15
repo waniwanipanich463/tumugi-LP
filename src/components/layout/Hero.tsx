@@ -70,12 +70,12 @@ export const Hero = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <div className="flex flex-col items-center justify-center gap-4 pb-8">
+                    <div className="flex flex-col items-center justify-center gap-4 pb-8 w-full">
                         <button
                             onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="cyber-button text-base xs:text-lg md:text-2xl px-6 xs:px-10 py-4 xs:py-5 group overflow-hidden relative"
+                            className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg lg:text-xl px-2 xs:px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto"
                         >
-                            <span className="relative z-10 font-black whitespace-nowrap">「資産を育てるつむぎ」を購入する →</span>
+                            <span className="relative z-10 font-black whitespace-nowrap tracking-tighter">100歳まで安心するための“出口戦略”を今すぐ受け取る →</span>
                         </button>
                         <p className="text-neon-fuchsia/80 text-sm font-bold tracking-widest animate-pulse">
                             ※動画を視聴した後に押してください
@@ -154,12 +154,12 @@ export const Hero = () => {
                     </div>
 
                     {/* CTA Button under video */}
-                    <div className="flex justify-center">
+                    <div className="flex justify-center w-full">
                         <button
                             onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="cyber-button text-lg xs:text-xl px-12 py-5 group overflow-hidden relative"
+                            className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg lg:text-xl px-2 xs:px-4 sm:px-6 md:px-12 py-3 sm:py-4 md:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto"
                         >
-                            <span className="relative z-10 font-black whitespace-nowrap">「資産を育てるつむぎ」を購入する</span>
+                            <span className="relative z-10 font-black whitespace-nowrap tracking-tighter">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
                         </button>
                     </div>
                 </div>

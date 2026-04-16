@@ -27,7 +27,7 @@ const plans = [
         ],
         buttonText: (
             <>
-                <span className="sm:hidden">
+                <span className="sm:hidden leading-tight block">
                     100歳まで安心するための<br />
                     “出口戦略”を今すぐ受け取る
                 </span>
@@ -209,7 +209,7 @@ export const Pricing = () => {
                                     <button
                                         onClick={() => handleCheckout(plan.priceId, plan.mode)}
                                         disabled={loading !== null}
-                                        className={`cyber-button w-full text-[10px] xs:text-[11px] sm:text-[12px] md:text-sm lg:text-base tracking-tighter mt-auto px-1 ${plan.highlighted ? '!border-neon-fuchsia !text-neon-fuchsia hover:!bg-neon-fuchsia hover:!text-white hover:shadow-[0_0_20px_#FF00FF]' : ''} ${loading === plan.priceId ? 'opacity-50 cursor-wait' : ''}`}
+                                        className={`cyber-button w-full text-[10px] xs:text-[11px] sm:text-[12px] md:text-sm lg:text-base tracking-tighter mt-auto px-1 whitespace-normal py-4 ${plan.highlighted ? '!border-neon-fuchsia !text-neon-fuchsia hover:!bg-neon-fuchsia hover:!text-white hover:shadow-[0_0_20px_#FF00FF]' : ''} ${loading === plan.priceId ? 'opacity-50 cursor-wait' : ''}`}
                                     >
                                         {loading === plan.priceId ? '準備中...' : plan.buttonText}
                                     </button>
@@ -407,10 +407,10 @@ export const Pricing = () => {
                             <div className="flex flex-col items-center md:items-start gap-4 w-full">
                                 <button
                                     onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg px-2 xs:px-4 sm:px-8 md:px-12 py-3 sm:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto md:mx-0"
+                                    className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg px-2 xs:px-4 sm:px-8 md:px-12 py-3 sm:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto md:mx-0 whitespace-normal"
                                 >
-                                    <span className="relative z-10 font-black tracking-tighter">
-                                        <span className="sm:hidden">
+                                    <span className="relative z-10 font-black tracking-tighter leading-tight">
+                                        <span className="sm:hidden block">
                                             100歳まで安心するための<br />
                                             “出口戦略”を今すぐ受け取る
                                         </span>

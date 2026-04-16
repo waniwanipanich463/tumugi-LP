@@ -25,7 +25,15 @@ const plans = [
             { text: 'サービス継続期間中の永続アクセス', included: true },
             { text: '一度の支払いで完結', included: true },
         ],
-        buttonText: '100歳まで安心するための“出口戦略”を今すぐ受け取る',
+        buttonText: (
+            <>
+                <span className="sm:hidden">
+                    100歳まで安心するための<br />
+                    “出口戦略”を今すぐ受け取る
+                </span>
+                <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
+            </>
+        ),
         highlighted: true,
         note: '',
         priceId: 'price_1T5gTqFu22Cfk29Fcs4MuzJB',
@@ -401,7 +409,13 @@ export const Pricing = () => {
                                     onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                                     className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg px-2 xs:px-4 sm:px-8 md:px-12 py-3 sm:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto md:mx-0"
                                 >
-                                    <span className="relative z-10 font-black whitespace-nowrap tracking-tighter">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
+                                    <span className="relative z-10 font-black tracking-tighter">
+                                        <span className="sm:hidden">
+                                            100歳まで安心するための<br />
+                                            “出口戦略”を今すぐ受け取る
+                                        </span>
+                                        <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
+                                    </span>
                                 </button>
                             </div>
                         </div>

@@ -75,7 +75,13 @@ export const Hero = () => {
                             onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                             className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg lg:text-xl px-2 xs:px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto"
                         >
-                            <span className="relative z-10 font-black whitespace-nowrap tracking-tighter">100歳まで安心するための“出口戦略”を今すぐ受け取る →</span>
+                                <span className="relative z-10 font-black tracking-tighter">
+                                    <span className="sm:hidden">
+                                        100歳まで安心するための<br />
+                                        “出口戦略”を今すぐ受け取る →
+                                    </span>
+                                    <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る →</span>
+                                </span>
                         </button>
                         <p className="text-neon-fuchsia/80 text-sm font-bold tracking-widest animate-pulse">
                             ※動画を視聴した後に押してください
@@ -159,7 +165,13 @@ export const Hero = () => {
                             onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                             className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg lg:text-xl px-2 xs:px-4 sm:px-6 md:px-12 py-3 sm:py-4 md:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto"
                         >
-                            <span className="relative z-10 font-black whitespace-nowrap tracking-tighter">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
+                            <span className="relative z-10 font-black tracking-tighter">
+                                <span className="sm:hidden">
+                                    100歳まで安心するための<br />
+                                    “出口戦略”を今すぐ受け取る
+                                </span>
+                                <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
+                            </span>
                         </button>
                     </div>
                 </div>

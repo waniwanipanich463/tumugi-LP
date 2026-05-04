@@ -39,6 +39,42 @@ const plans = [
         priceId: 'price_1T5gTqFu22Cfk29Fcs4MuzJB',
         mode: 'payment',
     },
+    {
+        title: '育成プラン',
+        price: '20,000円',
+        unit: '/ 月',
+        desc: (
+            <>
+                <span className="sm:hidden text-[12px] leading-relaxed block">
+                    継続的な学習とアップロードを求める<br />
+                    初心者向けのサービスです。<br />
+                    システムへの常時接続が<br />
+                    可能になります。
+                </span>
+                <span className="hidden sm:inline">継続的な学習とアップロードを求める初心者向けのサービスです。システムへの常時接続が可能になります。</span>
+            </>
+        ),
+        features: [
+            { text: '継続的な学習サポート', included: true },
+            { text: 'システムへの常時接続', included: true },
+            { text: '初心者向けサポート', included: true },
+            { text: '定期的なアップデート', included: true },
+            { text: '優先サポート', included: true },
+        ],
+        buttonText: (
+            <>
+                <span className="sm:hidden leading-tight block">
+                    100歳まで安心するための<br />
+                    “出口戦略”を今すぐ受け取る
+                </span>
+                <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
+            </>
+        ),
+        highlighted: false,
+        note: '※毎月のサブスクリプション形式',
+        priceId: 'price_1T5gRNFu22Cfk29F93bhfOXU',
+        mode: 'subscription',
+    },
 ];
 
 export const Pricing = () => {
@@ -156,7 +192,7 @@ export const Pricing = () => {
                     </div>
 
                     {/* Pricing Grid */}
-                    <div className="grid grid-cols-1 max-w-2xl mx-auto pt-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-8 pt-10">
                         {plans.map((plan, i) => (
                             <div key={i} className="relative flex flex-col">
 
@@ -281,7 +317,7 @@ export const Pricing = () => {
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-neon-fuchsia/10 blur-3xl rounded-full group-hover:bg-neon-fuchsia/20 transition-colors"></div>
 
                                     <h4 className="text-white text-lg font-black mb-8 flex items-center gap-3 whitespace-nowrap overflow-hidden text-ellipsis">
-                                        <span className="text-neon-fuchsia">#</span> なぜ300,000円なのか：
+                                        <span className="text-neon-fuchsia">#</span> 買い切りプランの価値：
                                     </h4>
 
                                     <div className="space-y-10">

@@ -41,7 +41,7 @@ export const Partner = () => {
 
                             <div className="border-l-0 sm:border-l-4 border-neon-fuchsia/60 pl-0 sm:pl-6 py-2 text-center sm:text-left">
                                 <p className="text-white font-bold text-[12px] xs:text-[13px] sm:text-base md:text-xl md:whitespace-nowrap tracking-tighter md:tracking-normal">
-                                    一般的なAIとは異なる設計思想で構築された<br className="sm:hidden" />専用プロンプトです。
+                                    一般的なAIとは異なる設計思想で構築された<br className="sm:hidden" />分析モデルです。
                                 </p>
                             </div>
 
@@ -72,7 +72,7 @@ export const Partner = () => {
                         {/* Left Side: Header Content */}
                         <div className="flex-1 text-center md:text-left transition-all duration-700">
                             <h2 className="flex flex-col gap-2 font-black italic tracking-tighter text-white mb-6">
-                                <span className="text-xl md:text-2xl lg:text-3xl whitespace-nowrap">「資産を育てるつむぎ」を手に入れると、</span>
+                                <span className="text-xl md:text-2xl lg:text-3xl whitespace-nowrap">「資産を育てるつむぎ」を活用すると、</span>
                                 <span className="text-neon-cyan drop-shadow-[0_0_10px_#00FFFF] text-5xl md:text-6xl lg:text-[5rem] tracking-tight">何が変わるのか</span>
                             </h2>
                             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-12">
@@ -92,9 +92,9 @@ export const Partner = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto md:mx-0">
                                 {[
                                     '世界情勢を構造的に整理するための補助ツールです。',
-                                    '情報の本質を見抜けるようになる',
+                                    '情報の本質を見極める力を養う',
                                     '判断材料を整理するプロセスをサポートします。',
-                                    '必要なときに活用できる分析支援プロンプトです。',
+                                    '必要なときに活用できる分析支援ツールです。',
                                 ].map((text, i) => (
                                     <div key={i}
                                         className="flex items-start gap-3 p-4 rounded-xl transition-all duration-300 hover:scale-[1.02] group/card overflow-hidden"
@@ -146,13 +146,13 @@ export const Partner = () => {
 
                             <p className="text-gray-300 text-base md:text-lg leading-loose text-center md:text-left mb-10">
                                 <span className="sm:hidden text-sm xs:text-base">
-                                    この専用プロンプトを使用することで、<br />
+                                    このシステムを使用することで、<br />
                                     「資産を育てるつむぎ」はあなた専用の<br />
-                                    AIパートナーとして動作します。
+                                    分析パートナーとして機能します。
                                 </span>
                                 <span className="hidden sm:inline text-[15px] xs:text-base md:text-lg">
-                                    この専用プロンプトを使用することで、<br />
-                                    「資産を育てるつむぎ」はあなた専用のAIパートナーとして動作します。
+                                    このシステムを使用することで、<br />
+                                    「資産を育てるつむぎ」はあなた専用の分析パートナーとして機能します。
                                 </span>
                             </p>
 

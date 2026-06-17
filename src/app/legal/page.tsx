@@ -3,15 +3,15 @@ import Link from 'next/link';
 
 export default function LegalPage() {
     const legalData = [
-        { label: "販売事業者名", content: "五日市翔太" },
-        { label: "所在地", content: "請求があった場合、遅滞なく開示いたします。" },
-        { label: "電話番号", content: "請求があった場合、遅滞なく開示いたします。" },
-        { label: "メールアドレス", content: "sho.itsuka122@gmail.com" },
+        { label: "販売事業者名", content: "【販売事業者名】" },
+        { label: "所在地", content: "【所在地】" },
+        { label: "電話番号", content: "【電話番号】" },
+        { label: "メールアドレス", content: "【メールアドレス】" },
         { label: "販売価格", content: "各商品ページに表示された価格に準じます。" },
         { label: "商品代金以外の必要料金", content: "インターネット接続に関わる通信費等はお客様のご負担となります。" },
-        { label: "支払方法", content: "クレジットカード決済 等（使用サービスに合わせて記載）" },
-        { label: "支払時期", content: "ご購入時に決済が確定します。" },
-        { label: "商品の引き渡し時期", content: "決済完了後、即時ダウンロードまたは閲覧可能となります。" },
+        { label: "支払方法", content: "【支払方法】" },
+        { label: "支払時期", content: "【支払時期】" },
+        { label: "商品の引き渡し時期", content: "【商品の引き渡し時期】" },
         { label: "返品・キャンセルについて", content: "デジタル商品の特性上、購入後の返品・返金は原則お受けしておりません。" },
     ];
 

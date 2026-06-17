@@ -22,9 +22,6 @@ export const Hero = () => {
                     {/* Title overlaid on image */}
                     <div className="absolute inset-0 z-10 flex items-center justify-center">
                         <div className="flex flex-col items-center w-full max-w-5xl gap-4 px-6 text-center">
-                            <p className="text-neon-cyan text-xs sm:text-sm md:text-base font-bold tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase mb-2 whitespace-nowrap">
-                                YouTubeをご覧いただいている方向けにご案内しています。
-                            </p>
                             <h1 className="flex flex-col items-center gap-3 font-black italic uppercase">
                                 <span className="text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-white to-neon-blue drop-shadow-[0_0_15px_rgba(0,255,255,0.8)] tracking-tight px-2">
                                     あなただけの
@@ -42,11 +39,11 @@ export const Hero = () => {
                     {/* Lead copy */}
                     <div className="max-w-3xl mx-auto mb-12 text-center">
                         <p className="text-lg xs:text-xl md:text-2xl text-white font-medium leading-relaxed mb-6 whitespace-nowrap">
-                            「資産を育てるつむぎ」をあなたの手に。
+                            「資産を育てるつむぎ」のご紹介。
                         </p>
                         <p className="text-base md:text-lg text-gray-300 leading-loose mb-4">
                             地政学・統計学・世界情勢を統合した<br />
-                            「資産を育てるつむぎ」の専用プロンプト。
+                            「資産を育てるつむぎ」の分析フレーム。
                         </p>
                         <p className="text-base md:text-lg text-gray-300 leading-loose">
                             <span className="sm:hidden">
@@ -61,32 +58,7 @@ export const Hero = () => {
                         </p>
                     </div>
 
-                    {/* CV强化 1行 */}
-                    <div className="mx-auto mb-10 text-center w-full px-2">
-                        <p className="whitespace-normal sm:whitespace-nowrap text-neon-fuchsia/90 text-[11px] xs:text-xs sm:text-sm md:text-base font-bold tracking-widest sm:tracking-wide border border-neon-fuchsia/30 rounded-xl px-3 sm:px-6 py-2 sm:py-3 inline-block"
-                            style={{ background: 'rgba(255,0,255,0.05)' }}>
-                            すでにYouTubeでつむぎを見ている方のために、<br className="sm:hidden" />この専用プロンプトを公開しました。
-                        </p>
-                    </div>
 
-                    {/* CTA Button */}
-                    <div className="flex flex-col items-center justify-center gap-4 pb-8 w-full">
-                        <button
-                            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg lg:text-xl px-2 xs:px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto"
-                        >
-                                <span className="relative z-10 font-black tracking-tighter">
-                                    <span className="sm:hidden">
-                                        100歳まで安心するための<br />
-                                        “出口戦略”を今すぐ受け取る →
-                                    </span>
-                                    <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る →</span>
-                                </span>
-                        </button>
-                        <p className="text-neon-fuchsia/80 text-sm font-bold tracking-widest animate-pulse">
-                            ※動画を視聴した後に押してください
-                        </p>
-                    </div>
                 </div>
             </section>
 
@@ -139,40 +111,16 @@ export const Hero = () => {
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-xl md:text-4xl font-black italic text-white text-center mb-4 tracking-tight flex flex-col gap-2">
                         <span className="text-[17px] xs:text-xl md:text-4xl whitespace-nowrap">「資産を育てるつむぎ」について、</span>
-                        <span className="text-[17px] xs:text-xl md:text-4xl text-neon-cyan whitespace-nowrap">より詳しく知りたい方へ</span>
+                        <span className="text-[17px] xs:text-xl md:text-4xl text-neon-cyan whitespace-nowrap">紹介動画</span>
                     </h2>
-                    <p className="text-gray-400 text-center mb-10">以下の動画をご覧ください。</p>
+                    <p className="text-gray-400 text-center mb-10">（動画は準備中です）</p>
 
-                    {/* Video Player */}
-                    <div className="relative w-full max-w-5xl mx-auto mb-16">
+                    {/* Video Player Placeholder */}
+                    <div className="relative w-full max-w-5xl mx-auto">
                         <div className="absolute -inset-1 bg-gradient-to-r from-neon-fuchsia via-neon-blue to-neon-cyan rounded-2xl blur opacity-30"></div>
-                        <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video border-2 border-white/10 z-[10] isolation-auto">
-                            <video
-                                src="/saisindouga.mp4"
-                                className="w-full h-full relative z-10"
-                                controls
-                                playsInline
-                                poster="/haikei.png"
-                            >
-                                <p>お使いのブラウザは動画再生に対応していません。</p>
-                            </video>
+                        <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black/40 aspect-video border-2 border-white/10 z-[10] flex items-center justify-center">
+                            <span className="text-gray-500 font-mono text-sm tracking-widest uppercase">// VIDEO PLACEHOLDER</span>
                         </div>
-                    </div>
-
-                    {/* CTA Button under video */}
-                    <div className="flex justify-center w-full">
-                        <button
-                            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="cyber-button text-[11px] xs:text-[12px] sm:text-sm md:text-lg lg:text-xl px-2 xs:px-4 sm:px-6 md:px-12 py-3 sm:py-4 md:py-5 group overflow-hidden relative w-[95%] sm:w-auto max-w-full mx-auto"
-                        >
-                            <span className="relative z-10 font-black tracking-tighter">
-                                <span className="sm:hidden">
-                                    100歳まで安心するための<br />
-                                    “出口戦略”を今すぐ受け取る
-                                </span>
-                                <span className="hidden sm:inline">100歳まで安心するための“出口戦略”を今すぐ受け取る</span>
-                            </span>
-                        </button>
                     </div>
                 </div>
             </section>

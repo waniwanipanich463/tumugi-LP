@@ -6,9 +6,6 @@ export const Footer = () => {
             <div className="container-premium">
 
                 <div className="flex flex-col justify-center items-center gap-4">
-                    <div className="text-[10px] text-text-dim/40 font-mono tracking-widest uppercase text-center">
-                        Copyright © 2026 つむぎ. All Rights Reserved.
-                    </div>
                 </div>
             </div>
 

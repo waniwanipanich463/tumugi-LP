@@ -24,10 +24,10 @@ export const Hero = () => {
                         <div className="flex flex-col items-center w-full max-w-5xl gap-4 px-6 text-center">
                             <h1 className="flex flex-col items-center gap-3 font-black italic uppercase">
                                 <span className="text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-white to-neon-blue drop-shadow-[0_0_15px_rgba(0,255,255,0.8)] tracking-tight px-2">
-                                    あなただけの
+                                    ーーー
                                 </span>
                                 <span className="text-4xl sm:text-5xl md:text-7xl text-[#FFD700] drop-shadow-[0_0_20px_rgba(255,215,0,0.8)] leading-[0.85] tracking-tighter whitespace-nowrap">
-                                    資産を育てるつむぎ
+                                    ーーー
                                 </span>
                             </h1>
                         </div>
@@ -39,21 +39,18 @@ export const Hero = () => {
                     {/* Lead copy */}
                     <div className="max-w-3xl mx-auto mb-12 text-center">
                         <p className="text-lg xs:text-xl md:text-2xl text-white font-medium leading-relaxed mb-6 whitespace-nowrap">
-                            「資産を育てるつむぎ」のご紹介。
+                            「ーーー」のご紹介。
                         </p>
                         <p className="text-base md:text-lg text-gray-300 leading-loose mb-4">
-                            地政学・統計学・世界情勢を統合した<br />
-                            「資産を育てるつむぎ」の分析フレーム。
+                            ーーー<br />
+                            ーーー
                         </p>
                         <p className="text-base md:text-lg text-gray-300 leading-loose">
                             <span className="sm:hidden">
-                                もう情報に振り回されるのではなく、<br />
-                                世界を構造的に捉えるための視点を<br />
-                                整理することを目的としています。
+                                ーーー
                             </span>
                             <span className="hidden sm:inline">
-                                もう情報に振り回されるのではなく、<br />
-                                世界を構造的に捉えるための視点を整理することを目的としています。
+                                ーーー
                             </span>
                         </p>
                     </div>
@@ -69,15 +66,15 @@ export const Hero = () => {
 
                 <div className="max-w-3xl mx-auto relative z-10">
                     <h2 className="text-[22px] xs:text-2xl md:text-5xl font-black italic text-white text-center mb-12 tracking-tight whitespace-nowrap">
-                        こんな経験は<span className="text-neon-fuchsia drop-shadow-[0_0_10px_#FF00FF]">ありませんか？</span>
+                        ーーー
                     </h2>
 
                     <ul className="space-y-5 mb-12">
                         {[
-                            'ニュースを見ても、本質が分からない',
-                            '情報が多すぎて、何を信じればいいか分からない',
-                            '将来に対する漠然とした不安がある',
-                            'もっと深く、世界の構造を理解したいと思っている',
+                            'ーーー',
+                            'ーーー',
+                            'ーーー',
+                            'ーーー',
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-sm xs:text-base md:text-lg text-gray-200 leading-relaxed whitespace-nowrap overflow-hidden"
                                 style={{ background: 'rgba(0,245,255,0.04)', border: '1px solid rgba(0,245,255,0.12)', borderRadius: '12px', padding: '12px 16px' }}>
@@ -89,16 +86,14 @@ export const Hero = () => {
 
                     <div className="border-l-0 sm:border-l-4 border-neon-cyan/60 pl-0 sm:pl-6 mb-8 text-center sm:text-left">
                         <p className="text-white font-bold text-xl md:text-2xl mb-4">
-                            その感覚は、正しいものです。
+                            ーーー
                         </p>
                         <p className="text-gray-300 text-sm xs:text-base md:text-lg leading-loose">
                             <span className="sm:hidden block text-[13px] xs:text-base">
-                                多くの情報は断片的であり、<br />
-                                本質を理解するには、構造的な視点が必要です。
+                                ーーー
                             </span>
                             <span className="hidden sm:inline">
-                                多くの情報は断片的であり、<br />
-                                本質を理解するには、<strong className="text-white">構造的な視点</strong>が必要です。
+                                ーーー
                             </span>
                         </p>
                     </div>
@@ -110,7 +105,7 @@ export const Hero = () => {
             <section className="bg-bg-dark py-16 px-4 relative" id="video">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-xl md:text-4xl font-black italic text-white text-center mb-4 tracking-tight flex flex-col gap-2">
-                        <span className="text-[17px] xs:text-xl md:text-4xl whitespace-nowrap">「資産を育てるつむぎ」について、</span>
+                        <span className="text-[17px] xs:text-xl md:text-4xl whitespace-nowrap">「ーーー」について、</span>
                         <span className="text-[17px] xs:text-xl md:text-4xl text-neon-cyan whitespace-nowrap">紹介動画</span>
                     </h2>
                     <p className="text-gray-400 text-center mb-10">（動画は準備中です）</p>

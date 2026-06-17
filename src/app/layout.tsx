@@ -14,8 +14,8 @@ const notoNSJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "つむぎ部屋 | 紡いだ努力が、未来の地図になる。",
-  description: "あなたの努力を独自の価値に紡ぎ直し、新しい日常を実現するためのオンラインコミュニティ。",
+  title: "ーーー | ーーー",
+  description: "ーーー",
   icons: {
     icon: "/fabicon.png",
     apple: "/fabicon.png",

@@ -4,70 +4,46 @@ import React from 'react';
 
 const plans = [
     {
-        title: 'プランA',
-        price: '--,---円',
-        unit: '',
+        title: 'ーーー',
         desc: (
             <>
                 <span className="sm:hidden text-[12px] leading-relaxed block">
-                    プランAの詳細説明テキストが<br />
-                    ここに入ります。<br />
-                    レイアウトとデザインを<br />
-                    確認するためのダミーです。
+                    ーーー<br />
+                    ーーー<br />
+                    ーーー
                 </span>
-                <span className="hidden sm:inline">プランAの詳細説明テキストがここに入ります。レイアウトとデザインを確認するためのダミーです。</span>
+                <span className="hidden sm:inline">ーーー</span>
             </>
         ),
         features: [
-            { text: '提供される機能やサービスの内容1', included: true },
-            { text: '提供される機能やサービスの内容2', included: true },
-            { text: '提供される機能やサービスの内容3', included: true },
-            { text: '提供される機能やサービスの内容4', included: true },
-            { text: '提供される機能やサービスの内容5', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
         ],
-        buttonText: (
-            <>
-                <span className="sm:hidden leading-tight block">
-                    プランAに申し込む
-                </span>
-                <span className="hidden sm:inline">プランAに申し込む</span>
-            </>
-        ),
         highlighted: true,
-        note: '',
     },
     {
-        title: 'プランB',
-        price: '--,---円',
-        unit: '/ 月',
+        title: 'ーーー',
         desc: (
             <>
                 <span className="sm:hidden text-[12px] leading-relaxed block">
-                    プランBの詳細説明テキストが<br />
-                    ここに入ります。<br />
-                    レイアウトとデザインを<br />
-                    確認するためのダミーです。
+                    ーーー<br />
+                    ーーー<br />
+                    ーーー
                 </span>
-                <span className="hidden sm:inline">プランBの詳細説明テキストがここに入ります。レイアウトとデザインを確認するためのダミーです。</span>
+                <span className="hidden sm:inline">ーーー</span>
             </>
         ),
         features: [
-            { text: '提供される機能やサービスの内容1', included: true },
-            { text: '提供される機能やサービスの内容2', included: true },
-            { text: '提供される機能やサービスの内容3', included: true },
-            { text: '提供される機能やサービスの内容4', included: true },
-            { text: '提供される機能やサービスの内容5', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
+            { text: 'ーーー', included: true },
         ],
-        buttonText: (
-            <>
-                <span className="sm:hidden leading-tight block">
-                    プランBに申し込む
-                </span>
-                <span className="hidden sm:inline">プランBに申し込む</span>
-            </>
-        ),
         highlighted: false,
-        note: '※サブスクリプション形式の注記',
     },
 ];
 
@@ -78,10 +54,10 @@ export const Pricing = () => {
                 {/* Section Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-[28px] xs:text-3xl md:text-7xl font-black text-white mb-8 italic uppercase tracking-tighter">
-                        サービスプランのご案内
+                        ーーー
                     </h2>
                     <p className="text-text-dim max-w-2xl mx-auto text-[13px] xs:text-lg font-mono whitespace-nowrap overflow-hidden text-ellipsis">
-                        目的に応じたプランを用意しております。
+                        ーーー
                     </p>
                 </div>
 
@@ -112,19 +88,10 @@ export const Pricing = () => {
                             >
                                 <div className="mb-12">
                                     <h3 className="text-[11px] xs:text-xs font-black text-neon-cyan tracking-[0.1em] xs:tracking-[0.3em] mb-6 uppercase whitespace-nowrap overflow-hidden text-ellipsis">{plan.title}</h3>
-                                    <div className="flex items-baseline justify-center md:justify-start gap-2 mb-2 whitespace-nowrap overflow-hidden">
-                                        <span className="text-4xl xs:text-6xl font-black text-white tracking-tighter italic">{plan.price}</span>
-                                        <span className="text-text-dim font-mono text-xs xs:text-sm uppercase">{plan.unit}</span>
-                                    </div>
-                                    {plan.note && (
-                                        <p className="text-[10px] text-text-dim/60 mb-6 font-mono tracking-tighter">
-                                            {plan.note}
-                                        </p>
-                                    )}
                                     <p className="text-text-dim text-sm leading-relaxed font-serif italic opacity-70 border-l-0 sm:border-l-2 border-neon-cyan/20 pl-0 sm:pl-4 text-center sm:text-left">{plan.desc}</p>
                                 </div>
 
-                                <ul className="space-y-4 mb-12 flex-grow">
+                                <ul className="space-y-4 flex-grow">
                                     {plan.features.map((f, j) => (
                                         <li key={j} className={`flex items-start text-xs font-mono tracking-tight ${f.included ? 'text-white' : 'opacity-0 pointer-events-none'}`}>
                                             <span className={`mr-3 mt-1 ${f.included ? 'text-neon-cyan' : ''}`}>
@@ -134,13 +101,6 @@ export const Pricing = () => {
                                         </li>
                                     ))}
                                 </ul>
-
-                                <button
-                                    onClick={() => alert('現在、お申し込みは受け付けておりません。')}
-                                    className={`cyber-button w-full text-[10px] xs:text-[11px] sm:text-[12px] md:text-sm lg:text-base tracking-tighter mt-auto px-1 whitespace-normal py-4 ${plan.highlighted ? '!border-neon-fuchsia !text-neon-fuchsia hover:!bg-neon-fuchsia hover:!text-white hover:shadow-[0_0_20px_#FF00FF]' : ''}`}
-                                >
-                                    {plan.buttonText}
-                                </button>
                             </div>
                         </div>
                     ))}
